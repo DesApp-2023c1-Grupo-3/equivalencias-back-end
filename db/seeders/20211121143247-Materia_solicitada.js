@@ -9,6 +9,14 @@ module.exports = {
     );
     const matsolicitada1 = materia1[0].id;
 
+    const carrera_1 = await queryInterface.sequelize.query(
+      `SELECT id FROM "Carrera" WHERE nombre_carrera = 'Tecnicatura en informatica' `,
+      {
+        type: queryInterface.sequelize.QueryTypes.SELECT,
+      }
+    );
+    const carrera1 = carrera_1[0].id;
+
     const materia2 = await queryInterface.sequelize.query(
       //`SELECT id FROM "Equivalencia" WHERE id_equivalencia = '10' `,
       `SELECT id FROM "Equivalencia" WHERE id = '2' `,
@@ -17,6 +25,14 @@ module.exports = {
       }
     );
     const matsolicitada2 = materia2[0].id;
+
+    const carrera_2 = await queryInterface.sequelize.query(
+      `SELECT id FROM "Carrera" WHERE nombre_carrera = 'Profesorado de Ingles' `,
+      {
+        type: queryInterface.sequelize.QueryTypes.SELECT,
+      }
+    );
+    const carrera2 = carrera_2[0].id;
 
     const materia3 = await queryInterface.sequelize.query(
       //`SELECT id FROM "Equivalencia" WHERE id_equivalencia = '14' `,
@@ -27,6 +43,14 @@ module.exports = {
     );
     const matsolicitada3 = materia3[0].id;
 
+    const carrera_3 = await queryInterface.sequelize.query(
+      `SELECT id FROM "Carrera" WHERE nombre_carrera = 'Lic. en Biotecnologia' `,
+      {
+        type: queryInterface.sequelize.QueryTypes.SELECT,
+      }
+    );
+    const carrera3 = carrera_3[0].id;
+
     const materia4 = await queryInterface.sequelize.query(
       //`SELECT id FROM "Equivalencia" WHERE id_equivalencia = '15' `,
       `SELECT id FROM "Equivalencia" WHERE id = '4' `,
@@ -35,6 +59,14 @@ module.exports = {
       }
     );
     const matsolicitada4 = materia4[0].id;
+
+    const carrera_4 = await queryInterface.sequelize.query(
+      `SELECT id FROM "Carrera" WHERE nombre_carrera = 'Lic. en Educacion' `,
+      {
+        type: queryInterface.sequelize.QueryTypes.SELECT,
+      }
+    );
+    const carrera4 = carrera_4[0].id;
 
     const materia5 = await queryInterface.sequelize.query(
       //`SELECT id FROM "Equivalencia" WHERE id_equivalencia = '12' `,
@@ -45,10 +77,18 @@ module.exports = {
     );
     const matsolicitada5 = materia5[0].id;
 
+    const carrera_5 = await queryInterface.sequelize.query(
+      `SELECT id FROM "Carrera" WHERE nombre_carrera = 'Tec. en Metalurgica' `,
+      {
+        type: queryInterface.sequelize.QueryTypes.SELECT,
+      }
+    );
+    const carrera5 = carrera_5[0].id;
+
     await queryInterface.bulkInsert('Materia_solicitada', [
       {
         nombre: 'Introducción a la Programación',
-        carrera: 'Tecnicatura en informatica',
+        id_carrera: carrera1,
         EquivalenciumId: matsolicitada1,
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -56,7 +96,7 @@ module.exports = {
 
       {
         nombre: 'Gramatica 1',
-        carrera: 'Profesorado de Ingles',
+        id_carrera: carrera2,
         EquivalenciumId: matsolicitada2,
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -64,7 +104,7 @@ module.exports = {
 
       {
         nombre: 'Biologia General',
-        carrera: 'Lic. en Biotecnologia',
+        id_carrera: carrera3,
         EquivalenciumId: matsolicitada3,
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -72,7 +112,7 @@ module.exports = {
 
       {
         nombre: 'Pedagogía I',
-        carrera: 'Lic. en Educacion',
+        id_carrera: carrera4,
         EquivalenciumId: matsolicitada4,
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -80,7 +120,7 @@ module.exports = {
 
       {
         nombre: 'Metalurgia l',
-        carrera: 'Tec. en Metalurgica',
+        id_carrera: carrera5,
         EquivalenciumId: matsolicitada5,
         createdAt: new Date(),
         updatedAt: new Date(),
