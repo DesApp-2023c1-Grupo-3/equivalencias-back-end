@@ -14,7 +14,7 @@ module.exports = {
           key: 'id',
         },
         onUpdate: 'CASCADE',
-        onDelete: '',
+        onDelete: 'CASCADE',
       }
     );
   },
