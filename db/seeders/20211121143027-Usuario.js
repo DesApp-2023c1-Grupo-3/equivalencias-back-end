@@ -91,6 +91,31 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+      {
+        dni: 30563652,
+        nombre: 'EZE',
+        apellido: 'Fernandez',
+        email: 'enzo@gmail.com',
+        discord: '@enzoF',
+        telefono: 44595568,
+        rol: 'superusuario',
+        password: 'prueba',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+
+      {
+        dni: 20569859,
+        nombre: 'Gonza ',
+        apellido: 'kiedis',
+        email: 'RHCP@gmail.com',
+        discord: '@Anthony55',
+        telefono: 1523698547,
+        rol: 'superusuario',
+        password: '12345',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
     ]);
   },
 
