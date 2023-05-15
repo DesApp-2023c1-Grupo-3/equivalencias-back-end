@@ -20,6 +20,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    return queryInterface.removeColumn('Equivalencia', 'CarreraID');
+    return queryInterface.removeColumn('Equivalencia', 'CarreraId');
   },
 };
