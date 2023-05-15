@@ -103,7 +103,6 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
-
       {
         dni: 39547370,
         nombre: 'Gonza ',
