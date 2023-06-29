@@ -14,6 +14,10 @@ module.exports = {
       nombre_instituto: {
         type: Sequelize.STRING,
       },
+      activo: {
+        type: Sequelize.INTEGER,
+        defaultValue: 1,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
